@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Shotsbyfarjad</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <header class="site-header">
+         <a href="index.html" class="logo" id="main-title">
+            SHOTSBYFARJAD<span>.</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="media.html">Media & Info</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="register-intro">
+            <h2>Join the Photography Community</h2>
+            <p>Register to share your creativity and connect through photography.</p>
+        </section>
+
+        <section class="form-container">
+            <h2>Create Your Account</h2>
+
+            <form action="#" method="get">
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter your full name"
+                       minlength="3" maxlength="40" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="example@email.com" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                       minlength="8" maxlength="20" required>
+
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label for="website">Portfolio Website</label>
+                <input type="url" id="website" name="website"
+                       placeholder="https://example.com">
+
+                <label for="experience">Years of Photography Experience</label>
+                <input type="number" id="experience" name="experience"
+                       min="0" max="50" value="0">
+
+                <label for="preferred-time">Preferred Photography Time</label>
+                <input type="time" id="preferred-time" name="preferred-time">
+
+                <label for="creativity">How creative are you feeling? (1–10)</label>
+                <input type="range" id="creativity" name="creativity"
+                       min="1" max="10" value="5">
+
+                <label for="theme-color">Choose Your Favourite Theme Color</label>
+                <input type="color" id="theme-color" name="theme-color"
+                       value="#c6a66b">
+
+                <label for="category">Favourite Photography Category</label>
+                <select id="category" name="category" required>
+                    <option value="" selected disabled>Choose a category</option>
+                    <option value="street">Street Photography</option>
+                    <option value="nature">Nature Photography</option>
+                    <option value="historical">Historical Places</option>
+                    <option value="portrait">Portrait Photography</option>
+                    <option value="campus">Campus Life</option>
+                </select>
+
+                <label for="portfolio">Upload a Sample Photograph</label>
+                <input type="file" id="portfolio" name="portfolio"
+                       accept="image/*">
+
+                <fieldset>
+                    <legend>Experience Level</legend>
+
+                    <label class="choice">
+                        <input type="radio" name="level" value="beginner" checked>
+                        Beginner
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="level" value="intermediate">
+                        Intermediate
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="level" value="professional">
+                        Professional
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Interests</legend>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interest" value="photography">
+                        Photography
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interest" value="videography">
+                        Videography
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interest" value="editing">
+                        Photo Editing
+                    </label>
+                </fieldset>
+
+                <label for="about">Tell Us About Yourself</label>
+                <textarea id="about" name="about" rows="4"
+                          maxlength="300"
+                          placeholder="Write a short introduction..."></textarea>
+
+                <label for="member-type">Membership Type (Read Only)</label>
+                <input type="text" id="member-type" name="member-type"
+                       value="Photography Community Member" readonly>
+
+                <label for="status">Account Status (Disabled)</label>
+                <input type="text" id="status" name="status"
+                       value="Assigned after registration" disabled>
+
+                <label class="terms">
+                    <input type="checkbox" name="terms" required>
+                    I agree to the community terms.
+                </label>
+
+                <button type="submit">Register Now</button>
+                <button type="reset" class="reset-button">Clear Form</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shotsbyfarjad | Photography & Visual Stories</p>
+    </footer>
+
+</body>
+</html>

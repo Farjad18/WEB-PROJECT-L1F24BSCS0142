@@ -1,0 +1,401 @@
+
+/* =====================================
+   1. GENERAL STYLING
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f2ec;
+    color: #292724;
+    line-height: 1.6;
+}
+
+/* =====================================
+   2. HEADER AND NAVIGATION
+===================================== */
+
+.site-header {
+    background-color: #f5f2ec;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ded7cc;
+}
+
+.site-header h1 {
+    color: #292724;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight:bold;
+    line-height: 1.6;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #292724;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #b65336;
+}
+
+/* =====================================
+   3. REGISTER INTRODUCTION
+===================================== */
+
+.register-intro {
+    text-align: center;
+    padding: 60px 20px 45px;
+    background-color: #e9e3d8;
+}
+
+.register-intro h2 {
+    color: #292724;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: normal;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.register-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #69645d;
+    font-size: 15px;
+}
+
+/* =====================================
+   4. FORM CONTAINER
+===================================== */
+
+.form-container {
+    width: 85%;
+    max-width: 750px;
+    margin: 45px auto;
+    padding: 35px;
+    background-color: #fffdf9;
+    border: 1px solid #e3dbcf;
+    border-radius: 4px;
+    box-shadow: 0 12px 35px rgba(50, 40, 25, 0.07);
+}
+
+.form-container h2 {
+    color: #292724;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Heading underline */
+.form-container h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    margin: 12px auto;
+    background-color: #b65336;
+}
+
+/* =====================================
+   5. FORM LABELS AND INPUTS
+===================================== */
+
+form > label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    color: #393631;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #d8d0c4;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #292724;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Text, email, password, date and similar fields */
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]):not([type="color"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="file"]),
+select,
+textarea {
+    width: 100%;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a49c91;
+}
+
+/* =====================================
+   6. ATTRIBUTE SELECTORS
+===================================== */
+
+input[type="color"] {
+    width: 65px;
+    height: 45px;
+    padding: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #b65336;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 9px;
+    background-color: #ffffff;
+}
+
+input[readonly] {
+    background-color: #eee9e1;
+    color: #777168;
+}
+
+input:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   7. FOCUS AND VALIDATION EFFECTS
+===================================== */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b65336;
+    box-shadow: 0 0 0 3px rgba(182, 83, 54, 0.12);
+}
+
+input:required:valid {
+    border-left: 4px solid #78866b;
+}
+
+input:required:invalid {
+    border-left: 4px solid #b65336;
+}
+
+/* =====================================
+   8. RADIO BUTTONS AND CHECKBOXES
+===================================== */
+
+fieldset {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #ded6ca;
+    border-radius: 3px;
+    background-color: #fffdf9;
+}
+
+legend {
+    color: #a64f34;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+form .choice,
+form .terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    color: #393631;
+    font-weight: normal;
+}
+
+.choice input,
+.terms input {
+    width: auto;
+    accent-color: #b65336;
+    cursor: pointer;
+}
+
+/* =====================================
+   9. BUTTONS
+===================================== */
+
+button {
+    margin-top: 22px;
+    margin-right: 8px;
+    padding: 12px 24px;
+    border: 1px solid #292724;
+    border-radius: 2px;
+    background-color: #292724;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #b65336;
+    border-color: #b65336;
+    transform: translateY(-2px);
+}
+
+.reset-button {
+    background-color: transparent;
+    color: #292724;
+    border-color: #d2c8bb;
+}
+
+.reset-button:hover {
+    background-color: #e9e3d8;
+    color: #292724;
+    border-color: #b65336;
+}
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background-color: #292724;
+    color: #f5f2ec;
+    font-size: 13px;
+    clear: both;
+}
+
+footer a:hover {
+    color: #d1ad78;
+}
+
+/* =====================================
+   11. TABLET RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 800px) {
+    .site-header {
+        padding: 20px 5%;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 28px;
+    }
+}
+
+/* =====================================
+   12. MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 650px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 3px;
+    }
+
+    .register-intro {
+        padding: 45px 6%;
+    }
+
+    .register-intro h2 {
+        font-size: 29px;
+    }
+
+    .form-container {
+        width: 92%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .form-container h2 {
+        font-size: 26px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    button {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    footer {
+        padding: 20px 12px;
+    }
+}
+
+
+/* Keep website logo the same color */
+.site-header .logo,
+.site-header .logo:link,
+.site-header .logo:visited,
+.site-header .logo:hover,
+.site-header .logo:active {
+    color: #292724;
+    text-decoration: none;
+}
+
+.site-header .logo span {
+    color: #b65336;
+}
