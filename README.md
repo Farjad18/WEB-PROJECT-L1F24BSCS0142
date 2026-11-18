@@ -22,7 +22,7 @@ ShotsbyFarjad is a photography and videography portfolio website created for the
 | 3 | Register | `register.html` | `register.css` |
 | 4 | Services | `services.html` | `services.css` |
 | 5 | Portfolio | `portfolio.html` | `portfolio.css` |
-| 6 | Contact | `contact.html` | `contact.css` |
+| 6 | Contact | `contact.html` | `contact.css` | 'contact.js' |
 
 
 ## Technologies
